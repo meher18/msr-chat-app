@@ -22,6 +22,7 @@ const io = Server(server);
 
 
 io.on('connection', (socket)=>{
+    console.log("socker with user "+socket.id+" connected");
     app.get("/rinfo",(req, res)=>{
         res.json(io.sockets.adapter.rooms);
     })
