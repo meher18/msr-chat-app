@@ -10,7 +10,9 @@ const PORT = process.env.PORT || 4000;
 var app = express();
 
 var server = http.createServer(app);
-server.listen(PORT);
+server.listen(PORT, () => {
+    console.log("posrt "+PORT);
+});
 
 
 
