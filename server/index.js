@@ -4,6 +4,7 @@ const http = require('http');
 const siofu = require("socketio-file-upload");
 const cors = require('cors');
 const path = require('path');
+const { hostname } = require('os');
 
 const PORT = process.env.PORT || 4000;
 
@@ -11,8 +12,10 @@ var app = express();
 
 var server = http.createServer(app);
 server.listen(PORT, () => {
-    console.log("posrt "+PORT);
+   
 });
+
+console.log(`Server running at ${PORT}/`);
 
 
 
